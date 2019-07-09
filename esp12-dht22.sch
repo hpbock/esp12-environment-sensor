@@ -270,10 +270,8 @@ Wire Wire Line
 	6050 2050 6050 1750
 Wire Wire Line
 	6050 3650 6050 3550
-Text GLabel 7150 2750 2    50   Input ~ 0
+Text GLabel 7150 2650 2    50   Input ~ 0
 DHT_Data
-Wire Wire Line
-	7150 2750 6650 2750
 $Comp
 L Device:R R3
 U 1 1 5D21D9BF
@@ -297,4 +295,6 @@ Wire Wire Line
 Connection ~ 2800 3200
 Wire Wire Line
 	2800 3200 2800 3300
+Wire Wire Line
+	7150 2650 6650 2650
 $EndSCHEMATC
