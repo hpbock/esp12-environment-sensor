@@ -15,17 +15,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Device:Battery_Cell BT1
-U 1 1 5D1FA78C
-P 1350 1550
-F 0 "BT1" H 1468 1646 50  0000 L CNN
-F 1 "Battery_Cell" H 1468 1555 50  0000 L CNN
-F 2 "Battery:BatteryHolder_MPD_BH-18650-PC2" V 1350 1610 50  0001 C CNN
-F 3 "~" V 1350 1610 50  0001 C CNN
-	1    1350 1550
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR02
 U 1 1 5D1FB566
 P 1350 1900
@@ -48,21 +37,7 @@ F 3 "" H 3550 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1350 1350 1350 1150
-Wire Wire Line
 	1350 1900 1350 1750
-$Comp
-L Device:CP C1
-U 1 1 5D1FC41A
-P 2350 1450
-F 0 "C1" H 2468 1496 50  0000 L CNN
-F 1 "10uF" H 2468 1405 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_4x5.8" H 2388 1300 50  0001 C CNN
-F 3 "~" H 2350 1450 50  0001 C CNN
-F 4 "VF 10/35 K-B" H 2350 1450 50  0001 C CNN "MFN"
-	1    2350 1450
-	1    0    0    -1  
-$EndComp
 $Comp
 L ht7333:HT7333-A L1
 U 1 1 5D1FAF3E
@@ -98,9 +73,6 @@ Wire Wire Line
 	2350 1600 2350 1750
 Wire Wire Line
 	2350 1750 1350 1750
-Connection ~ 1350 1750
-Wire Wire Line
-	1350 1750 1350 1650
 Wire Wire Line
 	3050 1450 3050 1750
 Wire Wire Line
@@ -114,7 +86,6 @@ Connection ~ 3050 1750
 Wire Wire Line
 	2350 1150 1350 1150
 Connection ~ 2350 1150
-Connection ~ 1350 1150
 Wire Wire Line
 	1350 1150 1350 1050
 Wire Wire Line
@@ -297,4 +268,65 @@ Wire Wire Line
 	2800 3200 2800 3300
 Wire Wire Line
 	7150 2650 6650 2650
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 5D2BB058
+P 1350 1400
+F 0 "J2" V 1504 1312 50  0000 R CNN
+F 1 "BAT+" V 1413 1312 50  0000 R CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 1350 1400 50  0001 C CNN
+F 3 "~" H 1350 1400 50  0001 C CNN
+	1    1350 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J1
+U 1 1 5D2BCA3C
+P 1350 1500
+F 0 "J1" V 1412 1544 50  0000 L CNN
+F 1 "BAT-" V 1503 1544 50  0000 L CNN
+F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 1350 1500 50  0001 C CNN
+F 3 "~" H 1350 1500 50  0001 C CNN
+	1    1350 1500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 1150 1350 1200
+Connection ~ 1350 1150
+Wire Wire Line
+	1350 1750 1350 1700
+Connection ~ 1350 1750
+$Comp
+L Device:C C3
+U 1 1 5D2D1431
+P 4050 1450
+F 0 "C3" H 4165 1496 50  0000 L CNN
+F 1 "100nF" H 4165 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4088 1300 50  0001 C CNN
+F 3 "~" H 4050 1450 50  0001 C CNN
+F 4 "KEM Y5V0603 100N" H 4050 1450 50  0001 C CNN "Reichelt"
+	1    4050 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 1300 4050 1000
+Wire Wire Line
+	4050 1000 3550 1000
+Wire Wire Line
+	4050 1600 4050 1750
+Wire Wire Line
+	4050 1750 3550 1750
+Connection ~ 3550 1750
+$Comp
+L Device:CP C1
+U 1 1 5D1FC41A
+P 2350 1450
+F 0 "C1" H 2468 1496 50  0000 L CNN
+F 1 "10uF" H 2468 1405 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.8" H 2388 1300 50  0001 C CNN
+F 3 "~" H 2350 1450 50  0001 C CNN
+F 4 "VF 10/35 K-B" H 2350 1450 50  0001 C CNN "Reichelt"
+	1    2350 1450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
