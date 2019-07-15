@@ -268,33 +268,7 @@ Wire Wire Line
 	2800 3200 2800 3300
 Wire Wire Line
 	7150 2650 6650 2650
-$Comp
-L Connector:Conn_01x01_Male J2
-U 1 1 5D2BB058
-P 1350 1400
-F 0 "J2" V 1504 1312 50  0000 R CNN
-F 1 "BAT+" V 1413 1312 50  0000 R CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 1350 1400 50  0001 C CNN
-F 3 "~" H 1350 1400 50  0001 C CNN
-	1    1350 1400
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector:Conn_01x01_Male J1
-U 1 1 5D2BCA3C
-P 1350 1500
-F 0 "J1" V 1412 1544 50  0000 L CNN
-F 1 "BAT-" V 1503 1544 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x01_Drill0.8mm" H 1350 1500 50  0001 C CNN
-F 3 "~" H 1350 1500 50  0001 C CNN
-	1    1350 1500
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1350 1150 1350 1200
 Connection ~ 1350 1150
-Wire Wire Line
-	1350 1750 1350 1700
 Connection ~ 1350 1750
 $Comp
 L Device:C C3
@@ -329,4 +303,24 @@ F 4 "VF 10/35 K-B" H 2350 1450 50  0001 C CNN "Reichelt"
 	1    2350 1450
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5D2CDCD0
+P 900 1400
+F 0 "J1" H 1008 1581 50  0000 C CNN
+F 1 "Battery" H 1008 1490 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 900 1400 50  0001 C CNN
+F 3 "~" H 900 1400 50  0001 C CNN
+F 4 "JST 2,0 PH 2-Pin" H 900 1400 50  0001 C CNN "MFN"
+	1    900  1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1400 1350 1400
+Wire Wire Line
+	1350 1150 1350 1400
+Wire Wire Line
+	1350 1500 1100 1500
+Wire Wire Line
+	1350 1500 1350 1750
 $EndSCHEMATC
