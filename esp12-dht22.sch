@@ -323,4 +323,12 @@ Wire Wire Line
 	1350 1500 1100 1500
 Wire Wire Line
 	1350 1500 1350 1750
+Text GLabel 7150 3250 2    50   Input ~ 0
+DeepSleep
+Text GLabel 5150 2250 0    50   Input ~ 0
+DeepSleep
+Wire Wire Line
+	5150 2250 5450 2250
+Wire Wire Line
+	6650 3250 7150 3250
 $EndSCHEMATC
