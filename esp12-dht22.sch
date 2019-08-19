@@ -200,32 +200,10 @@ Wire Wire Line
 	2800 3150 2800 3200
 Wire Wire Line
 	2800 3900 2800 4150
-$Comp
-L RF_Module:ESP-12E U1
-U 1 1 5D210A4B
-P 6050 2850
-F 0 "U1" H 6050 3831 50  0000 C CNN
-F 1 "ESP-12E" H 6050 3740 50  0000 C CNN
-F 2 "RF_Module:ESP-12E" H 6050 2850 50  0001 C CNN
-F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 5700 2950 50  0001 C CNN
-	1    6050 2850
-	1    0    0    -1  
-$EndComp
 Text GLabel 5150 2650 0    50   Input ~ 0
 ADC
 Wire Wire Line
 	5450 2650 5150 2650
-$Comp
-L power:GND #PWR0105
-U 1 1 5D216151
-P 6050 3650
-F 0 "#PWR0105" H 6050 3400 50  0001 C CNN
-F 1 "GND" H 6055 3477 50  0000 C CNN
-F 2 "" H 6050 3650 50  0001 C CNN
-F 3 "" H 6050 3650 50  0001 C CNN
-	1    6050 3650
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:VCC #PWR0106
 U 1 1 5D217225
@@ -238,9 +216,9 @@ F 3 "" H 6050 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6050 2050 6050 1750
+	6050 2050 6050 1800
 Wire Wire Line
-	6050 3650 6050 3550
+	6050 3700 6050 3650
 Text GLabel 7150 2650 2    50   Input ~ 0
 DHT_Data
 $Comp
@@ -331,4 +309,57 @@ Wire Wire Line
 	1100 1400 1350 1400
 Wire Wire Line
 	1350 1500 1100 1500
+$Comp
+L power:GND #PWR0105
+U 1 1 5D216151
+P 6050 3700
+F 0 "#PWR0105" H 6050 3450 50  0001 C CNN
+F 1 "GND" H 6055 3527 50  0000 C CNN
+F 2 "" H 6050 3700 50  0001 C CNN
+F 3 "" H 6050 3700 50  0001 C CNN
+	1    6050 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5D5BBD64
+P 6850 3450
+F 0 "R4" H 6920 3496 50  0000 L CNN
+F 1 "2k2" H 6920 3405 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6780 3450 50  0001 C CNN
+F 3 "~" H 6850 3450 50  0001 C CNN
+	1    6850 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3600 6850 3650
+Wire Wire Line
+	6850 3650 6050 3650
+Connection ~ 6050 3650
+Wire Wire Line
+	6050 3650 6050 3550
+Wire Wire Line
+	6850 3150 6850 3300
+Wire Wire Line
+	6650 3150 6850 3150
+$Comp
+L RF_Module:ESP-12E U1
+U 1 1 5D210A4B
+P 6050 2850
+F 0 "U1" H 6050 3831 50  0000 C CNN
+F 1 "ESP-12E" H 6050 3740 50  0000 C CNN
+F 2 "RF_Module:ESP-12E" H 6050 2850 50  0001 C CNN
+F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 5700 2950 50  0001 C CNN
+	1    6050 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2450 5300 2450
+Wire Wire Line
+	5300 2450 5300 1800
+Wire Wire Line
+	5300 1800 6050 1800
+Connection ~ 6050 1800
+Wire Wire Line
+	6050 1800 6050 1750
 $EndSCHEMATC
