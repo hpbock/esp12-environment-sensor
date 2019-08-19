@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:esp12-dht22-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -303,24 +303,8 @@ F 4 "VF 10/35 K-B" H 2350 1450 50  0001 C CNN "Reichelt"
 	1    2350 1450
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x02_Male J1
-U 1 1 5D2CDCD0
-P 900 1400
-F 0 "J1" H 1008 1581 50  0000 C CNN
-F 1 "Battery" H 1008 1490 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 900 1400 50  0001 C CNN
-F 3 "~" H 900 1400 50  0001 C CNN
-F 4 "JST 2,0 PH 2-Pin" H 900 1400 50  0001 C CNN "MFN"
-	1    900  1400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1100 1400 1350 1400
 Wire Wire Line
 	1350 1150 1350 1400
-Wire Wire Line
-	1350 1500 1100 1500
 Wire Wire Line
 	1350 1500 1350 1750
 Text GLabel 7150 3250 2    50   Input ~ 0
@@ -331,4 +315,20 @@ Wire Wire Line
 	5150 2250 5450 2250
 Wire Wire Line
 	6650 3250 7150 3250
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5D2CDCD0
+P 900 1500
+F 0 "J1" H 1008 1681 50  0000 C CNN
+F 1 "Battery" H 1008 1590 50  0000 C CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 900 1500 50  0001 C CNN
+F 3 "~" H 900 1500 50  0001 C CNN
+F 4 "JST 2,0 PH 2-Pin" H 900 1500 50  0001 C CNN "MFN"
+	1    900  1500
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1100 1400 1350 1400
+Wire Wire Line
+	1350 1500 1100 1500
 $EndSCHEMATC
