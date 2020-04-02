@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:esp12-dht22-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -181,23 +180,10 @@ F 3 "" H 2800 4150 50  0001 C CNN
 	1    2800 4150
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR0104
-U 1 1 5D20B40D
-P 2800 3150
-F 0 "#PWR0104" H 2800 3000 50  0001 C CNN
-F 1 "VCC" H 2817 3323 50  0000 C CNN
-F 2 "" H 2800 3150 50  0001 C CNN
-F 3 "" H 2800 3150 50  0001 C CNN
-	1    2800 3150
-	1    0    0    -1  
-$EndComp
 Text GLabel 3300 3600 2    50   Input ~ 0
 DHT_Data
 Wire Wire Line
 	3300 3600 3200 3600
-Wire Wire Line
-	2800 3150 2800 3200
 Wire Wire Line
 	2800 3900 2800 4150
 Text GLabel 5150 2650 0    50   Input ~ 0
@@ -237,13 +223,6 @@ Wire Wire Line
 Connection ~ 3200 3600
 Wire Wire Line
 	3200 3600 3100 3600
-Wire Wire Line
-	3200 3250 3200 3200
-Wire Wire Line
-	3200 3200 2800 3200
-Connection ~ 2800 3200
-Wire Wire Line
-	2800 3200 2800 3300
 Wire Wire Line
 	7150 2650 6650 2650
 Connection ~ 1350 1150
@@ -362,4 +341,30 @@ Wire Wire Line
 Connection ~ 6050 1800
 Wire Wire Line
 	6050 1800 6050 1750
+$Comp
+L power:+BATT #PWR0104
+U 1 1 5E866C68
+P 2800 3050
+F 0 "#PWR0104" H 2800 2900 50  0001 C CNN
+F 1 "+BATT" H 2815 3223 50  0000 C CNN
+F 2 "" H 2800 3050 50  0001 C CNN
+F 3 "" H 2800 3050 50  0001 C CNN
+	1    2800 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0107
+U 1 1 5E86D5F4
+P 3200 3050
+F 0 "#PWR0107" H 3200 2900 50  0001 C CNN
+F 1 "VCC" H 3217 3223 50  0000 C CNN
+F 2 "" H 3200 3050 50  0001 C CNN
+F 3 "" H 3200 3050 50  0001 C CNN
+	1    3200 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3250 3200 3050
+Wire Wire Line
+	2800 3050 2800 3300
 $EndSCHEMATC
