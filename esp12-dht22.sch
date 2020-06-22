@@ -71,8 +71,6 @@ Wire Wire Line
 Wire Wire Line
 	2350 1600 2350 1750
 Wire Wire Line
-	2350 1750 1350 1750
-Wire Wire Line
 	3050 1450 3050 1750
 Wire Wire Line
 	3050 1750 2350 1750
@@ -82,8 +80,6 @@ Wire Wire Line
 Wire Wire Line
 	3550 1750 3050 1750
 Connection ~ 3050 1750
-Wire Wire Line
-	2350 1150 1350 1150
 Connection ~ 2350 1150
 Wire Wire Line
 	1350 1150 1350 1050
@@ -225,8 +221,6 @@ Wire Wire Line
 	3200 3600 3100 3600
 Wire Wire Line
 	7150 2650 6650 2650
-Connection ~ 1350 1150
-Connection ~ 1350 1750
 $Comp
 L Device:C C3
 U 1 1 5D2D1431
@@ -260,10 +254,6 @@ F 4 "VF 10/35 K-B" H 2350 1450 50  0001 C CNN "Reichelt"
 	1    2350 1450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1350 1150 1350 1400
-Wire Wire Line
-	1350 1500 1350 1750
 Text GLabel 7150 3250 2    50   Input ~ 0
 DeepSleep
 Text GLabel 5150 2250 0    50   Input ~ 0
@@ -272,22 +262,6 @@ Wire Wire Line
 	5150 2250 5450 2250
 Wire Wire Line
 	6650 3250 7150 3250
-$Comp
-L Connector:Conn_01x02_Male J1
-U 1 1 5D2CDCD0
-P 900 1500
-F 0 "J1" H 1008 1681 50  0000 C CNN
-F 1 "Battery" H 1008 1590 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 900 1500 50  0001 C CNN
-F 3 "~" H 900 1500 50  0001 C CNN
-F 4 "JST 2,0 PH 2-Pin" H 900 1500 50  0001 C CNN "MFN"
-	1    900  1500
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	1100 1400 1350 1400
-Wire Wire Line
-	1350 1500 1100 1500
 $Comp
 L power:GND #PWR0105
 U 1 1 5D216151
@@ -367,4 +341,25 @@ Wire Wire Line
 	3200 3250 3200 3050
 Wire Wire Line
 	2800 3050 2800 3300
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5EF0876C
+P 1350 1500
+F 0 "BT1" H 1468 1596 50  0000 L CNN
+F 1 "18650" H 1468 1505 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1042_1x18650" V 1350 1560 50  0001 C CNN
+F 3 "~" V 1350 1560 50  0001 C CNN
+	1    1350 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1750 1350 1600
+Connection ~ 1350 1750
+Wire Wire Line
+	1350 1750 2350 1750
+Wire Wire Line
+	1350 1300 1350 1150
+Connection ~ 1350 1150
+Wire Wire Line
+	1350 1150 2350 1150
 $EndSCHEMATC
